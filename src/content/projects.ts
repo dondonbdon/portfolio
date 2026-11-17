@@ -56,6 +56,9 @@ export interface Project {
   children?: ProjectChild[];
 }
 
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const mediaPath = (file: string) => `${BASE_PATH}/media/${file}`;
+
 /**
  * Featured celestial bodies ordered along the inward flight path:
  * 2023 Outer Rim (Origins Belt) -> 2025/2026 Inner System -> 2026 Galactic Core (Spotly)
@@ -91,7 +94,7 @@ export const featuredProjects: Project[] = [
     visibility: "private",
     media: [
       {
-        src: "/media/origins.jpg",
+        src: mediaPath("origins.jpg"),
         alt: "2023 Origins Belt — five glowing hero asteroids orbiting toward the core",
         caption: "Five foundational Android builds connected by the Swift → Spotly evolution beam",
       },
@@ -161,7 +164,7 @@ export const featuredProjects: Project[] = [
     visibility: "private",
     media: [
       {
-        src: "/media/stm32-utils.jpg",
+        src: mediaPath("stm32-utils.jpg"),
         alt: "STM32-utils circuit moon with illuminated copper and cyan traces",
         caption: "Procedural PCB trace topology representing bare-metal driver layers",
       },
@@ -199,7 +202,7 @@ export const featuredProjects: Project[] = [
     visibility: "private",
     media: [
       {
-        src: "/media/payment-processor.jpg",
+        src: mediaPath("payment-processor.jpg"),
         alt: "Orbital financial clearing station with synchronized amber and emerald event beams",
         caption: "Event-driven Kafka payment pipeline & webhook verification gates",
       },
@@ -237,7 +240,7 @@ export const featuredProjects: Project[] = [
     visibility: "private",
     media: [
       {
-        src: "/media/wos-util.jpg",
+        src: mediaPath("wos-util.jpg"),
         alt: "Frozen tactical planet with hexagonal fortress grids and frost telemetry",
         caption: "Arctic hexagonal sector & fortress positioning grid",
       },
@@ -275,7 +278,7 @@ export const featuredProjects: Project[] = [
     visibility: "private",
     media: [
       {
-        src: "/media/flashpdf.jpg",
+        src: mediaPath("flashpdf.jpg"),
         alt: "Refractive crystal shards transforming document planes into an AI knowledge graph",
         caption: "Document ingestion & knowledge-graph refraction",
       },
@@ -313,7 +316,7 @@ export const featuredProjects: Project[] = [
     visibility: "private",
     media: [
       {
-        src: "/media/hacia.jpg",
+        src: mediaPath("hacia.jpg"),
         alt: "Ringed orbital platform representing Hacia v2 to v3 architectural evolution",
         caption: "v3 reactive core encircled by the v2 service architecture",
       },
@@ -358,7 +361,7 @@ export const featuredProjects: Project[] = [
     visibility: "private",
     media: [
       {
-        src: "/media/spotly.jpg",
+        src: mediaPath("spotly.jpg"),
         alt: "Spotly multi-service mobility and delivery trajectory visualization",
         caption: "Multi-vertical Ride, Send & Bite dispatch network",
       },
