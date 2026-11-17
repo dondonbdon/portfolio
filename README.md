@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Project Singularity — 3D Galaxy Portfolio (`@dondonbdon`)
 
-## Getting Started
+An interactive 3D galaxy portfolio built with **Next.js (App Router)**, **React Three Fiber**, **drei**, **@react-three/postprocessing**, **custom GLSL shaders**, **Lenis**, and **Tailwind CSS v4**.
 
-First, run the development server:
+Each repository and system orbits **Spotly** at the galactic core, with orbital radius acting as a chronological timeline from the **2023 Origins Belt** on the outer rim to **2026** at the core.
+
+## Celestial Map
+
+| Celestial Body | System | Visual / Shader Signature |
+|---|---|---|
+| **Galactic Core Star** | **Spotly** | FBM plasma shader + Fresnel corona, 3 vertical moons (*Ride*, *Send*, *Bite*), 4 client satellites (*Super*, *Driver*, *Merchant*, *Admin*) |
+| **Ringed Gas Giant** | **Hacia Platform (v2 → v3)** | Banded turbulent atmosphere shader + particle ring representing the v2 → v3 reactive migration |
+| **Refractive Crystal** | **FlashPDF** | Faceted refractive icosahedron + orbiting flipping flashcard shards |
+| **Frozen Planet** | **wos-util** | Cracked frost shader, drifting snow blizzard particles, and surface tactical fortress nodes |
+| **Orbital Clearing Station** | **payment-processor** | Metallic titanium torus emitting animated Kafka / Paynow bezier event beams |
+| **Circuit Moon** | **stm32-utils** | Procedural PCB trace shader with travelling current pulses & orbiting pin headers |
+| **Origins Asteroid Belt** | **2023 Android Fleet** | 180 instanced asteroids + 5 hero asteroids (*Swift*, *Elixer*, *Oslea*, *Paoz*, *IdealZW*) with a *Swift → Spotly* evolution beam |
+| **Outer Halo Constellation** | **Archive** | Connected star nodes for *KDYM*, *AchieverFarm*, *Robocode*, *spring-starter*, *Boundless*, *wos-bot*, and *CS 9618* |
+
+## Controls & Fallbacks
+
+- **Scroll** in Overview mode to fly inward along the `CatmullRomCurve3` camera rail.
+- **Click** any planet, asteroid, star, or HUD minimap node to dock and inspect its case study.
+- **Keyboard:** `←` / `→` to step between systems, `Esc` to return to Galaxy Overview.
+- **2D Lite & SEO:** Automatic WebGL2 / GPU tier / `prefers-reduced-motion` detection routes constrained devices to `LiteSite` (`/lite`), and every project has a statically generated case study at `/projects/[slug]`.
+
+## Customization
+
+- Personal bio, title, email, skills, and social links live in `src/content/profile.ts`.
+- Featured bodies, archive stars, media, and links live in `src/content/projects.ts`.
+
+## Local Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Open `http://localhost:3000` (or `http://localhost:3000/?lite=1` for 2D mode).
